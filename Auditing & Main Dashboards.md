@@ -67,10 +67,48 @@ The following increase sensitivity for the entity
 
 
 **WHEN DOING AN INVESTIGATION**
-- mark user right off the bat, could find more detections that way
+- mark user right off the bat, could get more detections that way
 	- they'll be removed from the watchlist automatically
+
+
+**Users Dashboard**
+
+![](assets/Pasted%20image%2020260903110442.png)
+
+
+**Customizing Password Dictionary**
+- any time that there is an account change and IdP is turned on, it'll do a hash assessment
+	- partial hash assessment in the context of the password ONLY
+	- account gets changed (migration, name change, etc)
+	- pulled from HaveiBeenPwned - assessment done in CS cloud
+
+Identity Protection > Inventory and Posture > Risk Configuration
+
+![](assets/Pasted%20image%2020260903110647.png)
+
+
+you can force a password check with FalconPy
+- otherwise, it has to be an AD account change to check
+
+
+**Analysis-Based Risk**
+- don't remember seeing these in our environment, but here they are in their CID
+	- can add exclusions as needed
+
+![](assets/Pasted%20image%2020260903111506.png)
+
+![](assets/Pasted%20image%2020260903111513.png)
+
+![](assets/Pasted%20image%2020260903111522.png)
+
+![](assets/Pasted%20image%2020260903111535.png)
+
+![](assets/Pasted%20image%2020260903111540.png)
+
 
 **User Accounts being Misclassified as Programmatic**
 - when a migration happens and email gets wiped > moved to programmatic
 - if they have an SPN > sometimes auto moved to programmatic
 - can move them back by modifying the object
+
+
